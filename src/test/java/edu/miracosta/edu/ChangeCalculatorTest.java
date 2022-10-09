@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import edu.miracosta.cs113.change.ChangeCalculator;
 
 
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -82,7 +83,7 @@ public class ChangeCalculatorTest {
     // region Test evaluating duplicate values
 
     @Test
-    public void testDuplicates() {
+    public void testDuplicates() throws IOException {
         // First verify that 75 cents yields 121 combinations
         assertEquals(
                 FIVES_LARGE_COMBINATIONS[0], ChangeCalculator.calculateChange(FIVES_LARGE[0]), "Test duplicates failed - Incorrect number of combinations.");
@@ -124,3 +125,4 @@ public class ChangeCalculatorTest {
     // endregion Test evaluating duplicate values
 
 } // End of class ChangeCalculatorTest
+
